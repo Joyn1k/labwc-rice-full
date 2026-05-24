@@ -1,0 +1,36 @@
+# Example autostart file
+
+# Set background color.
+#swaybg -i /home/danik/HDDDisk/trash/linux-wallpaper-blue.jpeg -m fill >/dev/null 2>&1 &
+#swaybg -i /home/danik/HDDDisk/trash/linux-wallapaper-tux.jpg -m fill >/dev/null 2>&1 &
+#swaybg -i /home/danik/HDDDisk/trash/panels.png -m fill >/dev/null 2>&1 &
+swaybg -i /home/danik/HDDDisk/trash/archdark.png -m fill >/dev/null 2>&1 &
+wlr-randr --output HDMI-A-2 --mode 1920x1080@74.986000Hz
+wlr-randr --output HDMI-A-1 --pos 0,0 --output HDMI-A-2 --pos 0,0
+wlr-randr --output HDMI-A-2 --brightness 1,0
+
+swayidle -w timeout 1800 'systemctl suspend' &
+
+# Configure output directives such as mode, position, scale and transform.
+# Use wlr-randr to get your output names
+# Example ~/.config/kanshi/config below:
+#   profile {
+#    output HDMI-A-2 mode 1920x1080@75Hz position 0,0
+#    output HDMI-A-1 mode preferred position 0,0 mirror HDMI-A-2
+#       }
+# Launch a panel such as yambar or waybar
+waybar >/dev/null 2>&1 &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Enable notifications. Typically GNOME/KDE application notifications go
+# through the org.freedesktop.Notifications D-Bus API and require a client such
+# as mako to function correctly. Thunderbird is an example of this.
+
+
+# Lock screen after 5 minutes; turn off display after another 5 minutes.
+#
+# Note that in the context of idle system power management, it is *NOT* a good
+# idea to turn off displays by 'disabling outputs' for example by
+# `wlr-randr --output <whatever> --off` because this re-arranges views
+# (since a837fef). Instead use a wlr-output-power-management client such as
+# https://git.sr.ht/~leon_plickat/wlopm

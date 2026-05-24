@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<labwc_config>
+  <core>
+    <vsync>false</vsync>
+    <xwaylandPersistence>yes</xwaylandPersistence>
+  </core>
+  <keyboard>
+    <keybind key="W-q">
+      <action name="Execute" command="alacritty"/>
+    </keybind>
+    <keybind key="W-c">
+      <action name="Close"/>
+    </keybind>
+    <keybind key="W-s">
+      <action name="ToggleAlwaysOnTop"/>
+    </keybind>
+    <keybind key="W-e">
+      <action name="Execute" command="thunar"/>
+    </keybind>
+    <keybind key="W-f">
+      <action name="Execute" command="pavucontrol"/>
+    </keybind>
+    <keybind key="W-space">
+      <action name="Execute" command="setxkbmap -layout 'us,ru' -option 'grp:win_space'"/>
+    </keybind>
+    <keybind key="A-Tab">
+      <action name="NextWindow"/>
+    </keybind>
+    <keybind key="W-S-i">
+      <action name="Execute" command="sh -c &quot;grim -g \&quot;$(slurp)\&quot; - | wl-copy&quot;"/>
+    </keybind>
+    <keybind key="W-l">
+      <action name="Execute" command="wofi --show drun"/>
+    </keybind>
+    <keybind key="W-1">
+      <action name="GoToDesktop" to="1"/>
+    </keybind>
+    <keybind key="W-2">
+      <action name="GoToDesktop" to="2"/>
+    </keybind>
+    <keybind key="W-3">
+      <action name="GoToDesktop" to="3"/>
+    </keybind>
+    <keybind key="W-4">
+      <action name="GoToDesktop" to="4"/>
+    </keybind>
+    <keybind key="W-5">
+      <action name="GoToDesktop" to="5"/>
+    </keybind>
+    <keybind key="W-6">
+      <action name="GoToDesktop" to="6"/>
+    </keybind>
+    <keybind key="W-7">
+      <action name="GoToDesktop" to="7"/>
+    </keybind>
+    <keybind key="W-8">
+      <action name="GoToDesktop" to="8"/>
+    </keybind>
+    <keybind key="W-9">
+      <action name="GoToDesktop" to="9"/>
+    </keybind>
+    <keybind key="W-0">
+      <action name="GoToDesktop" to="0"/>
+    </keybind>
+  </keyboard>
+  <!-- <mouse></mouse> -->
+  <libinput>
+    <device category="default">
+      <accel_profile>false</accel_profile>
+      <pointerSpeed>-0.7</pointerSpeed>
+      <naturalScroll/>
+    </device>
+  </libinput>
+  <theme>
+    <name>Adwaita Revisited Dark</name>
+    <icon>breeze-dark</icon>
+    <maximizedDecoration>titlebar</maximizedDecoration>
+    <dropShadows>yes</dropShadows>
+    <dropShadowsOnTiled>yes</dropShadowsOnTiled>
+    <cornerRadius>2</cornerRadius>
+  </theme>
+  <desktops number="10">
+    <names>
+      <name>1</name>
+      <name>2</name>
+      <name>3</name>
+      <name>4</name>
+      <name>5</name>
+      <name>6</name>
+      <name>7</name>
+      <name>8</name>
+      <name>9</name>
+      <name>0</name>
+    </names>
+  </desktops>
+</labwc_config>
